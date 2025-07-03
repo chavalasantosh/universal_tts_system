@@ -1,7 +1,0 @@
-engine: edge-tts
-name: test_voice
-settings:
-  pitch: +0Hz
-  rate: +0%
-  volume: +0%
-voice_id: en-US-GuyNeural

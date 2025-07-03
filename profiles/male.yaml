@@ -1,7 +1,0 @@
-name: male
-engine: pyttsx3
-voice_id: male
-settings:
-  rate: 180
-  volume: 1.0
-  pitch: -2 

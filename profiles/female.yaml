@@ -1,7 +1,0 @@
-name: female
-engine: pyttsx3
-voice_id: female
-settings:
-  rate: 190
-  volume: 0.95
-  pitch: 2 
