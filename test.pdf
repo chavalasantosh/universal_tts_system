@@ -1,0 +1,10 @@
+This is a test PDF file for the Universal TTS System.
+It contains multiple paragraphs to test the text extraction and TTS capabilities.
+
+The system should be able to:
+1. Read PDF files
+2. Extract text properly
+3. Convert text to speech
+4. Save the audio output
+
+This is a test of the paragraph handling and formatting capabilities. 
