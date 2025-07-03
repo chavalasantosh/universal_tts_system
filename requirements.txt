@@ -1,0 +1,57 @@
+# Core dependencies
+pyttsx3>=2.90
+PyYAML>=6.0.1
+
+# Local TTS Engines
+TTS>=0.17.6  # Coqui TTS
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+
+# File processing
+python-docx>=0.8.11
+PyPDF2>=3.0.0
+pdfminer.six>=20221105
+ebooklib==0.18
+beautifulsoup4>=4.12.2
+markdown>=3.4.0
+lxml>=4.9.3
+
+# Audio processing
+pydub>=0.25.1
+sounddevice>=0.4.6
+numpy>=1.21.0
+scipy>=1.7.0
+librosa>=0.9.0
+noisereduce>=2.0.1  # Noise reduction
+pysndfx>=0.3.6  # Audio effects
+soundfile>=0.10.0
+ffmpeg-python>=0.2.0  # Audio format conversion
+
+# Voice processing
+phonemizer>=3.2.1
+unidecode>=1.3.6
+espeak-ng>=0.1.7  # For phonemization
+
+# Utilities
+tqdm>=4.66.1
+aiofiles>=23.2.1
+pydantic>=2.0.0  # Data validation
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio==0.21.1
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+
+# Development
+black>=23.7.0
+isort>=5.12.0
+mypy>=1.5.1
+flake8>=6.1.0
+pylint>=3.0.2
+
+# New dependencies
+edge-tts>=6.1.0
+azure-cognitiveservices-speech>=1.25.0
+elevenlabs>=0.2.0

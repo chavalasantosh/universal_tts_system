@@ -1,0 +1,79 @@
+# Default configuration for Universal TTS System
+
+# Logging configuration
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/tts.log"
+
+# Cache configuration
+cache:
+  max_size_mb: 1024
+  max_age_days: 7
+  cleanup_interval_hours: 1
+
+# Default voice profiles
+default_profiles:
+  - name: "default"
+    engine: "edge-tts"
+    voice_id: "en-US-GuyNeural"
+    settings:
+      rate: "+0%"
+      volume: "+0%"
+      pitch: "+0Hz"
+      style: "general"
+      style_degree: 1.0
+      role: "Default"
+
+  - name: "storyteller"
+    engine: "edge-tts"
+    voice_id: "en-US-JennyNeural"
+    settings:
+      rate: "-10%"
+      volume: "+0%"
+      pitch: "+0Hz"
+      style: "story"
+      style_degree: 1.5
+      role: "Narrator"
+
+  - name: "news_anchor"
+    engine: "edge-tts"
+    voice_id: "en-US-AriaNeural"
+    settings:
+      rate: "+0%"
+      volume: "+0%"
+      pitch: "+0Hz"
+      style: "newscast"
+      style_degree: 1.0
+      role: "NewsAnchor"
+
+# File processing configuration
+file_processing:
+  supported_formats:
+    - txt
+    - docx
+    - pdf
+    - html
+    - md
+  max_file_size_mb: 10
+  chunk_size: 5000
+
+# Audio output configuration
+audio:
+  default_format: "mp3"
+  supported_formats:
+    - mp3
+    - wav
+    - ogg
+  sample_rate: 24000
+  channels: 1
+  bitrate: "48k"
+
+# API configuration
+api:
+  enabled: false
+  host: "localhost"
+  port: 8000
+  cors_origins: ["*"]
+  rate_limit: 100
+  rate_limit_period: 3600 

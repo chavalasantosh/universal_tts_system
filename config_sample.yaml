@@ -1,0 +1,77 @@
+# Universal TTS System Configuration
+system:
+  name: "Universal TTS System"
+  version: "2.0.0"
+  log_level: INFO
+  max_file_size_mb: 100
+  concurrent_workers: 4
+  temp_directory: "temp"
+  output_directory: "output"
+
+tts_engines:
+  default: "elevenlabs"
+  pyttsx3:
+    rate: 200
+    volume: 0.9
+  gtts:
+    lang: en
+    slow: false
+  edge:
+    voice: "en-US-AriaNeural"
+    rate: "+0%"
+  elevenlabs:
+    voice_id: "default"
+    stability: 0.75
+    similarity_boost: 0.75
+    style: 0.0
+    use_speaker_boost: true
+  coqui:
+    model_name: "tts_models/en/ljspeech/tacotron2-DDC"
+    vocoder_name: "vocoder_models/en/ljspeech/hifigan_v2"
+  tortoise:
+    preset: "fast"
+    voice: "random"
+    use_deterministic_seed: false
+  bark:
+    voice_preset: "v2/en_speaker_6"
+    text_temp: 0.7
+    waveform_temp: 0.7
+  playht:
+    voice: "en-US-JennyNeural"
+    quality: "high"
+    output_format: "mp3"
+  resemble:
+    voice_id: "default"
+    stability: 0.75
+    similarity_boost: 0.75
+
+audio_processing:
+  enabled: true
+  noise_reduction:
+    enabled: true
+    strength: 0.5
+  normalization:
+    enabled: true
+    target_level: -14
+  effects:
+    enabled: false
+    reverb: 0.0
+    echo: 0.0
+    compression: 0.0
+  output_format: "mp3"
+  sample_rate: 44100
+  channels: 2
+
+content_processing:
+  ssml_enabled: true
+  punctuation_pause_duration: 0.5
+  sentence_pause_duration: 1.0
+  paragraph_pause_duration: 2.0
+  text_cleanup: true
+  language_detection: true
+
+# Add API keys as environment variables:
+# export ELEVENLABS_API_KEY=your_key_here
+# export AZURE_TTS_API_KEY=your_key_here
+# export PLAYHT_API_KEY=your_key_here
+# export RESEMBLE_API_KEY=your_key_here
